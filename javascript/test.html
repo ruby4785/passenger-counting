@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form id="test" method="POST", enctype="multipart/form-data", action="succ.html">
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Example file input</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+<script>
+    $("#test").submit(function(){
+        var data = new FormData($(this)[0]);
+        console.log(data);
+        $.ajax(
+        {
+            url:"http://13.92.85.167/docs/add_bus_videos/",
+            data:data,
+            type:'POST',
+            processData:false,
+            contentType:false,
+            crossDomain:true,
+            success:function(data){
+                console.log("SUcceeeessss");
+            }
+    
+    });
+
+    })
+
+</script>
+</body>
+</html>
+

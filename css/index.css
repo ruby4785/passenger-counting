@@ -1,0 +1,17 @@
+.navbar-brand
+{
+    text-decoration: none;
+}
+body{
+    background-color: white;
+}
+#main-heading
+{
+    margin-top: 18px;
+    margin-left:10px;
+}
+.submit-button
+{
+    margin-left:610px;
+    margin-top:40px;
+}
